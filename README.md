@@ -205,22 +205,28 @@ If our repo or survey is useful for your research, please cite our paper as foll
   [[code]](https://github.com/YiZeng623/I-BAU_Adversarial_Unlearning_of-Backdoors_via_implicit_Hypergradient)
   - Yi Zeng, Si Chen, Won Park, Z. Morley Mao, Ming Jin, and Ruoxi Jia. *ICLR*, 2022.
   - remain effective in the extreme case where the defender can only access 100 clean samples -- a setting where all the baselines fail to produce acceptable results.
-  - <font color=Blue>Unlearning</font>
-
+```diff
++ Unlearning
+```
 
 - Adversarial Neuron Pruning Purifies Backdoored Deep Models.
   [[pdf]](https://arxiv.org/pdf/2110.14430.pdf)
   [[code]](https://github.com/csdongxian/ANP_backdoor)
   - Dongxian Wu and Yisen Wang. *NeurIPS*, 2021.
   - with only an extremely small amount of clean data (e.g., 1%)
-  - <font color=Blue>Pruning</font>
+```diff
++ Pruning
+```
 
 - Neural Attention Distillation: Erasing Backdoor Triggers from Deep Neural Networks.
   [[pdf]](https://openreview.net/pdf?id=9l0K4OM-oXE)
   [[code]](https://github.com/bboylyg/NAD)
   - Yige Li, Xingjun Ma, Nodens Koren, Lingjuan Lyu, Xixiang Lyu, and Bo Li. *ICLR*, 2021.
   -  a teacher network to guide the finetuning of the backdoored student network on a small clean subset of data such that the intermediate-layer attention of the student network aligns with that of the teacher network
-  -  <font color=Blue>Knowledge distillation</font> on clean data
+```diff
++ Knowledge distillation on clean data
+```
+
 
 - Bridging Mode Connectivity in Loss Landscapes and Adversarial Robustness.
   [[pdf]](https://arxiv.org/pdf/2005.00060.pdf)
@@ -238,6 +244,9 @@ If our repo or survey is useful for your research, please cite our paper as foll
   - Kota Yoshida, and Takeshi Fujino. *CCS Workshop*, 2020.
   -  it does not require detecting and identifying backdoor models, backdoor neurons, and poison data.
   -  the defender can collect clean images without labels
+```diff
++ Knowledge distillation on clean data
+```
 
 - Adversarial Fine-tuning for Backdoor Defense: Connect Adversarial Examples to Triggered Samples.
   [[pdf]](https://arxiv.org/pdf/2202.06312.pdf)
