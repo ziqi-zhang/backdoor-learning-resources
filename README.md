@@ -1,23 +1,3 @@
-# Backdoor Learning Resources
-This Github repository summarizes a curated list of **Backdoor Learning** resources. For more details and the categorization criteria, please refer to our [survey](https://www.researchgate.net/publication/343006441_Backdoor_Learning_A_Survey).
-
-
-#### Why Backdoor Learning?
-Backdoor learning is an emerging research area, which discusses the security issues of the training process towards machine learning algorithms. It is critical for safely adopting third-party algorithms in reality.  Although backdoor learning shares certain similarity with adversarial learning (which concentrates on the security issues of the inference process), they do have essential differences and can be easily distinguished.
-
-Note: 'Backdoor' is also commonly called the 'Neural Trojan' or 'Trojan'.
-
-
-## Citation
-If our repo or survey is useful for your research, please cite our paper as follows:
-```
-@article{li2020backdoor,
-  title={Backdoor learning: A survey},
-  author={Li, Yiming and Jiang, Yong and Li, Zhifeng and Xia, Shu-Tao},
-  journal={arXiv preprint arXiv:2007.08745},
-  year={2020}
-}
-```
 
 
 ## Table of Contents
@@ -259,14 +239,22 @@ If our repo or survey is useful for your research, please cite our paper as foll
   [[pdf]](https://arxiv.org/pdf/2110.14880.pdf)
   [[code]](https://github.com/aeva-backdoor-deteciton/Aeva-Blackbox-Backdoor-Detection)
   - Junfeng Guo, Ang Li, and Cong Liu. *ICLR*, 2022.
+  - black-box hard-label backdoor detection problem where the DNN is fully black-box and only its final output label is accessible.
 
 - Trigger Hunting with a Topological Prior for Trojan Detection.
   [[pdf]](https://arxiv.org/pdf/2110.08335.pdf)
   - Xiaoling Hu, Xiao Lin, Michael Cogswell, Yi Yao, Susmit Jha, and Chao Chen. *ICLR*, 2022.
+  -  recovering the triggers on a clean image by manipulating the model’s prediction.
+  -  perform effectively in cases with unknown target labels.
 
 - Black-box Detection of Backdoor Attacks with Limited Information and Data.
   [[pdf]](https://arxiv.org/pdf/2103.13127.pdf)
   - Yinpeng Dong, Xiao Yang, Zhijie Deng, Tianyu Pang, Zihao Xiao, Hang Su, and Jun Zhu. *ICCV*, 2021.
+  -  blackbox backdoor detection 
+  -  demonstrate the applicability of B3D when using synthetic samples (denoted as B3D-SS) in the case that the clean samples for optimization are unavailable.
+```diff
+- use synthetic samples
+```
 
 - Backdoor Scanning for Deep Neural Networks through K-Arm Optimization.
   [[pdf]](https://arxiv.org/pdf/2102.05123.pdf)
