@@ -265,11 +265,13 @@
   [[pdf]](https://gangw.web.illinois.edu/class/cs598/papers/sp19-poisoning-backdoor.pdf)
   [[code]](https://github.com/bolunwang/backdoor)
   - Bolun Wang, Yuanshun Yao, Shawn Shan, Huiying Li, Bimal Viswanath, Haitao Zheng, Ben Y. Zhao. *IEEE S&P*, 2019.
+  - 10% of training data required in Neural Cleanse according to Few-shot Backdoor Defense Using Shapley Estimation [[pdf]](https://arxiv.org/pdf/2112.14889.pdf)
 
 - Defending Neural Backdoors via Generative Distribution Modeling.
   [[pdf]](https://arxiv.org/pdf/1910.04749.pdf)
   [[code]](https://github.com/superrrpotato/Defending-Neural-Backdoors-via-Generative-Distribution-Modeling)
   - Ximing Qiao, Yukun Yang, and Hai Li. *NeurIPS*, 2019.
+  - Use generative models to generate various triggers
 
 - DeepInspect: A Black-box Trojan Detection and Mitigation Framework for Deep Neural Networks.
   [[pdf]](https://www.ijcai.org/proceedings/2019/0647.pdf)
@@ -278,18 +280,28 @@
 - Backdoor Defense with Machine Unlearning.
   [[pdf]](https://arxiv.org/pdf/2201.09538.pdf)
   - Yang Liu, Mingyuan Fan, Cen Chen, Ximeng Liu, Zhuo Ma, Li Wang, and Jianfeng Ma. arXiv, 2022.
+  - Use machine unlearning to erase backdoor. Specifically to use gradient ascent to unlearn backdoor
+  - the proposed approach gets rid of the reliance on the full access to training data for retraining
 
 - Few-shot Backdoor Defense Using Shapley Estimation.
   [[pdf]](https://arxiv.org/pdf/2112.14889.pdf)
   - Jiyang Guan, Zhuozhuo Tu, Ran He, and Dacheng Tao. arXiv, 2021.
+  - 1 image per class or even free of data
+```diff
+- prune & limited data
+```
 
 - CatchBackdoor: Backdoor Testing by Critical Trojan Neural Path Identification via Differential Fuzzing.
   [[pdf]](https://arxiv.org/pdf/2112.13064.pdf)
   - Haibo Jin, Ruoxi Chen, Jinyin Chen, Yao Cheng, Chong Fu, Ting Wang, Yue Yu, and Zhaoyan Ming. arXiv, 2021.
+  - DNN testing & neural path
 
 - Detect and Remove Watermark in Deep Neural Networks via Generative Adversarial Networks.
   [[pdf]](https://arxiv.org/pdf/2106.08104.pdf)
   - Haoqi Wang, Mingfu Xue, Shichang Sun, Yushu Zhang, Jian Wang, and Weiqiang Liu. arXiv, 2021.
+  - 6 pages
+  - detect and remove watermark in deep neural networks via generative adversarial networks (GAN)
+  - 1. use the GAN and few clean images to detect and reverse the watermark in the DNN model. 2. fine-tune the watermarked DNN
 
 - TAD: Trigger Approximation based Black-box Trojan Detection for AI.
   [[pdf]](https://arxiv.org/pdf/2102.01815.pdf)
