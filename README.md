@@ -380,27 +380,36 @@
 - Trojan Signatures in DNN Weights.
   [[pdf]](https://arxiv.org/pdf/2109.02836.pdf)
   - Greg Fields, Mohammad Samragh, Mojan Javaheripi, Farinaz Koushanfar, and Tara Javidi. arXiv, 2021.
+  - no need training/test data, no assumption of the nature of the trigger
+  - analyze the final linear weights
 
 - EX-RAY: Distinguishing Injected Backdoor from Natural Features in Neural Networks by Examining Differential Feature Symmetry.
   [[pdf]](https://arxiv.org/pdf/2103.08820.pdf)
   - Yingqi Liu, Guangyu Shen, Guanhong Tao, Zhenting Wang, Shiqing Ma, and Xiangyu Zhang. arXiv, 2021.
+  - develop a novel symmetric feature differencing method that identifies a smallest set of features separating two classes
 
 - TOP: Backdoor Detection in Neural Networks via Transferability of Perturbation.
   [[pdf]](https://arxiv.org/pdf/2103.10274.pdf)
   - Todd Huster and Emmanuel Ekwedike. arXiv, 2021.
+  - w/o training data nor triger pattern
+  - adversarial perturbations transfer from image to image more readily in poisoned models than in clean models
 
 - Detecting Trojaned DNNs Using Counterfactual Attributions.
   [[pdf]](https://arxiv.org/pdf/2012.02275.pdf)
+  - code https://github.com/SRI-CSL/Trinity-TrojAI
   - Karan Sikka, Indranil Sur, Susmit Jha, Anirban Roy, and Ajay Divakaran. arXiv, 2021.
+  - the trigger behavior depends on a few ghost neurons that activate on trigger pattern and exhibit abnormally higher relative attribution for wrong decisions when activated
 
 - Adversarial examples are useful too!
   [[pdf]](https://arxiv.org/pdf/2005.06107.pdf)
   [[code]](https://github.com/aliborji/Backdoor_defense)
   - XBorji A. arXiv, 2020.
+  - tell whether a model has been subject to a backdoor attack.
 
 - Cassandra: Detecting Trojaned Networks from Adversarial Perturbations.
   [[pdf]](https://arxiv.org/pdf/2007.14433.pdf)
   - Xiaoyu Zhang, Ajmal Mian, Rohit Gupta, Nazanin Rahnavard, and Mubarak Shah. arXiv, 2020.
+  - verify if a pre-trained model is Trojaned or benign
   
 - Odyssey: Creation, Analysis and Detection of Trojan Models.
   [[pdf]](https://arxiv.org/pdf/2007.08142.pdf)
@@ -421,17 +430,13 @@
   [[pdf]](https://openreview.net/pdf?id=TySnJ-0RdKI)
   [[code]](https://github.com/SCLBD/DBD)
   - Kunzhe Huang, Yiming Li, Baoyuan Wu, Zhan Qin, and Kui Ren. *ICLR*, 2022.
+  - need unlabeled training data
 
 - Anti-Backdoor Learning: Training Clean Models on Poisoned Data.
   [[pdf]](https://arxiv.org/pdf/2110.11571.pdf)
   [[code]](https://github.com/bboylyg/ABL)
   - Yige Li, Xixiang Lyu, Nodens Koren, Lingjuan Lyu, Bo Li, and Xingjun Ma. *NeurIPS*, 2021.
-
-
-- Robust Anomaly Detection and Backdoor Attack Detection via Differential Privacy.
-  [[pdf]](https://arxiv.org/pdf/1911.07116.pdf)
-  [[code]](https://www.dropbox.com/sh/rt8qzii7wr07g6n/AAAbwokv2sfBeE9XAL2pXv_Aa?dl=0)
-  - Min Du, Ruoxi Jia, and Dawn Song. *ICLR*, 2020.  
+  - detect and filter triggered training data during the backdoor training phase
 
 - What Doesn't Kill You Makes You Robust(er): Adversarial Training against Poisons and Backdoors.
   [[pdf]](https://arxiv.org/pdf/2102.13624.pdf)
