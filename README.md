@@ -425,45 +425,6 @@
   - Xijie Huang, Moustafa Alzantot, and Mani Srivastava. arXiv, 2019.
 
 
-#### Poison Suppression based Empirical Defense
-- Backdoor Defense via Decoupling the Training Process.
-  [[pdf]](https://openreview.net/pdf?id=TySnJ-0RdKI)
-  [[code]](https://github.com/SCLBD/DBD)
-  - Kunzhe Huang, Yiming Li, Baoyuan Wu, Zhan Qin, and Kui Ren. *ICLR*, 2022.
-  - need unlabeled training data
-
-- Anti-Backdoor Learning: Training Clean Models on Poisoned Data.
-  [[pdf]](https://arxiv.org/pdf/2110.11571.pdf)
-  [[code]](https://github.com/bboylyg/ABL)
-  - Yige Li, Xixiang Lyu, Nodens Koren, Lingjuan Lyu, Bo Li, and Xingjun Ma. *NeurIPS*, 2021.
-  - detect and filter triggered training data during the backdoor training phase
-
-- What Doesn't Kill You Makes You Robust(er): Adversarial Training against Poisons and Backdoors.
-  [[pdf]](https://arxiv.org/pdf/2102.13624.pdf)
-  - Jonas Geiping, Liam Fowl, Gowthami Somepalli, Micah Goldblum, Michael Moeller, and Tom Goldstein. *ICLR Workshop*, 2021.
-
-- On the Effectiveness of Adversarial Training against Backdoor Attacks.
-  [[pdf]](https://arxiv.org/pdf/2202.10627.pdf)
-  - Yinghua Gao, Dongxian Wu, Jingfeng Zhang, Guanhao Gan, Shu-Tao Xia, Gang Niu, and Masashi Sugiyama. arXiv, 2022.
-
-- Resurrecting Trust in Facial Recognition: Mitigating Backdoor Attacks in Face Recognition to Prevent Potential Privacy Breaches.
-  [[pdf]](https://arxiv.org/pdf/2202.10320.pdf)
-  - Reena Zelenkova, Jack Swallow, M. A. P. Chamikara, Dongxi Liu, Mohan Baruwal Chhetri, Seyit Camtepe, Marthie Grobler, and Mahathir Almashor. arXiv, 2022.
-
-- SanitAIs: Unsupervised Data Augmentation to Sanitize Trojaned Neural Networks.
-  [[pdf]](https://arxiv.org/pdf/2109.04566.pdf)
-  - Kiran Karra and Chace Ashcraft. arXiv, 2021.
-
-- On the Effectiveness of Mitigating Data Poisoning Attacks with Gradient Shaping.
-  [[pdf]](https://arxiv.org/pdf/2002.11497.pdf)
-  [[code]](https://github.com/Sanghyun-Hong/Gradient-Shaping)
-  - Sanghyun Hong, Varun Chandrasekaran, Yiğitcan Kaya, Tudor Dumitraş, and Nicolas Papernot. arXiv, 2020.  
-
-- DP-InstaHide: Provably Defusing Poisoning and Backdoor Attacks with Differentially Private Data Augmentations.
-  [[pdf]](https://arxiv.org/pdf/2103.02079.pdf)
-  - Eitan Borgnia, Jonas Geiping, Valeriia Cherepanova, Liam Fowl, Arjun Gupta, Amin Ghiasi, Furong Huang, Micah Goldblum, and Tom Goldstein. arXiv, 2021.
- 
-
 
 #### Sample Filtering based Empirical Defense
 - Rethinking the Backdoor Attacks' Triggers: A Frequency Perspective.
@@ -475,11 +436,15 @@
   [[pdf]](https://arxiv.org/pdf/1908.00686.pdf)
   [[code]](https://github.com/TDteach/backdoor)
   - Di Tang, XiaoFeng Wang, Haixu Tang, and Kehuan Zhang. *USENIX Security*, 2021.
+```diff
++ security21
+```
 
 - SPECTRE: Defending Against Backdoor Attacks Using Robust Statistics.
   [[pdf]](https://arxiv.org/pdf/2104.11315.pdf)
   [[code]](https://github.com/SewoongLab/spectre-defense)
   - Jonathan Hayase, Weihao Kong, Raghav Somani, and Sewoong Oh. *ICML*, 2021.
+  -  separate corrupted examples from clean ones.
 
 - Robust Anomaly Detection and Backdoor Attack Detection via Differential Privacy.
   [[pdf]](https://arxiv.org/pdf/1911.07116.pdf)
@@ -491,18 +456,11 @@
   [[code]](https://github.com/ZaydH/cosin)
   - Zayd Hammoudeh and Daniel Lowd. *ICML Workshop*, 2021.
 
-- SentiNet: Detecting Localized Universal Attacks Against Deep Learning Systems.
-  [[pdf]](https://arxiv.org/pdf/1812.00292.pdf)
-  - Edward Chou, Florian Tramèr, and Giancarlo Pellegrino. *IEEE S&P Workshop*, 2020.
-
-- Deep Probabilistic Models to Detect Data Poisoning Attacks.
-  [[pdf]](https://arxiv.org/pdf/1912.01206.pdf)
-  - Mahesh Subedar, Nilesh Ahuja, Ranganath Krishnan, Ibrahima J. Ndiour, and Omesh Tickoo. *NeurIPS Workshop*, 2019.  
-
 - Spectral Signatures in Backdoor Attacks.
   [[pdf]](https://arxiv.org/pdf/1811.00636.pdf)
   [[code]](https://github.com/MadryLab/backdoor_data_poisoning)
   - Brandon Tran, Jerry Li, and Aleksander Madry. *NeurIPS*, 2018.  
+  - detecting and removing poisoned examples on real image sets
 
 - Towards Effective and Robust Neural Trojan Defenses via Input Filtering.
   [[pdf]](https://arxiv.org/pdf/2202.12154.pdf)
