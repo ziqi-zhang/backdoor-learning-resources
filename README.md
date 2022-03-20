@@ -333,8 +333,11 @@
   - Xiaojun Xu, Qi Wang, Huichen Li, Nikita Borisov, Carl A. Gunter, and Bo Li. *IEEE S&P*, 2021.
   - prior work impractical assumption: (1) ''all-to-one'' attack is easy to detect, (2) white-box access to the model, (3) clean-data and clean-labell backdoor attack is difficult to detect
   - black-box access to the model, no need training data, need clean data
+  - experiments cover CV, NLP, speech, tabular
 
-<span style="color:blue">some *blue* text</span>.
+```diff
++ SP21
+```
 
 - Topological Detection of Trojaned Neural Networks.
   [[pdf]](https://arxiv.org/pdf/2106.06469.pdf)
