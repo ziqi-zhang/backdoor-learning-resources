@@ -461,10 +461,14 @@
   [[code]](https://github.com/MadryLab/backdoor_data_poisoning)
   - Brandon Tran, Jerry Li, and Aleksander Madry. *NeurIPS*, 2018.  
   - detecting and removing poisoned examples on real image sets
+```diff
+use SVD to filter triggered inputs
+```
 
 - Towards Effective and Robust Neural Trojan Defenses via Input Filtering.
   [[pdf]](https://arxiv.org/pdf/2202.12154.pdf)
   - Kien Do, Haripriya Harikumar, Hung Le, Dung Nguyen, Truyen Tran, Santu Rana, Dang Nguyen, Willy Susilo, and Svetha Venkatesh. arXiv, 2022.
+  - New backdoor types: (1) using multiple, input-specific triggers and (2) targeting multiple classes.
 
 - Neural Network Trojans Analysis and Mitigation from the Input Domain.
   [[pdf]](https://arxiv.org/pdf/2202.06382.pdf)
@@ -518,36 +522,6 @@
   [[pdf]](https://arxiv.org/pdf/1911.08040.pdf)
   - Alvin Chan, and Yew-Soon Ong. arXiv, 2019.  
   
-#### Certificated Defense
-- Certified Robustness of Nearest Neighbors against Data Poisoning and Backdoor Attacks.
-  [[pdf]](https://arxiv.org/pdf/2012.03765.pdf)
-  - Jinyuan Jia, Yupei Liu, Xiaoyu Cao, and Neil Zhenqiang Gong. *AAAI*, 2022.
-
-- Deep Partition Aggregation: Provable Defense against General Poisoning Attacks
-  [[pdf]](https://arxiv.org/abs/2006.14768)
-  [[code]](https://github.com/alevine0/DPA)
-  - Alexander Levine and Soheil Feizi. *ICLR*, 2021.
-  
-- Intrinsic Certified Robustness of Bagging against Data Poisoning Attacks
-  [[pdf]](https://arxiv.org/abs/2008.04495)
-  [[code]](https://github.com/jjy1994/BaggingCertifyDataPoisoning)
-  - Jinyuan Jia, Xiaoyu Cao, and Neil Zhenqiang Gong. *AAAI*, 2021.
-
-- Certified Robustness to Label-Flipping Attacks via Randomized Smoothing.
-  [[pdf]](https://arxiv.org/pdf/2002.03018.pdf)
-  - Elan Rosenfeld, Ezra Winston, Pradeep Ravikumar, and J. Zico Kolter. *ICML*, 2020.
-
-- On Certifying Robustness against Backdoor Attacks via Randomized Smoothing.
-  [[pdf]](https://arxiv.org/pdf/2002.11750.pdf)
-  - Binghui Wang, Xiaoyu Cao, Jinyuan jia, and Neil Zhenqiang Gong. *CVPR Workshop*, 2020.
-
-- RAB: Provable Robustness Against Backdoor Attacks.
-  [[pdf]](https://arxiv.org/pdf/2003.08904.pdf)
-  [[code]](https://github.com/AI-secure/Robustness-Against-Backdoor-Attacks)
-  - Maurice Weber, Xiaojun Xu, Bojan Karlas, Ce Zhang, and Bo Li. arXiv, 2020.
-
-
-
 ## Attack and Defense Towards Other Paradigms and Tasks
 ### Collaborative Learning
 
