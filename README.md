@@ -306,15 +306,20 @@
 - TAD: Trigger Approximation based Black-box Trojan Detection for AI.
   [[pdf]](https://arxiv.org/pdf/2102.01815.pdf)
   - Xinqiao Zhang, Huili Chen, and Farinaz Koushanfar. arXiv, 2021.
+  - 6 pages
+  - 
 
 - Scalable Backdoor Detection in Neural Networks.
   [[pdf]](https://arxiv.org/pdf/2006.05646.pdf)
   - Haripriya Harikumar, Vuong Le, Santu Rana, Sourangshu Bhattacharya, Sunil Gupta, and Svetha Venkatesh. arXiv, 2020.
+  -  computational complexity does not scale with the number of labels 
+  -  is based on a measure that is both interpretable and universal across different network and patch types.
 
 - NNoculation: Broad Spectrum and Targeted Treatment of Backdoored DNNs.
   [[pdf]](https://arxiv.org/pdf/2002.08313.pdf)
   [[code]](https://github.com/akshajkumarv/NNoculation)
-  - Akshaj Kumar Veldanda, Kang Liu, Benjamin Tan, Prashanth Krishnamurthy, Farshad Khorrami, Ramesh Karri, Brendan Dolan-Gavitt, and Siddharth Garg. arXiv, 2020.
+  - Akshaj Kumar Veldanda, Kang Liu, Benjamin Tan, Prashanth Krishnamurthy, Farshad Khorrami, Ramesh Karri, Brendan Dolan-Gavitt, and Siddharth Garg. AISec21.
+  - two stages. repairs a BadNet both pre-deployment and online in response to backdoored test inputs encountered in the field.
 
 #### Model Diagnosis based Empirical Defense
 - Post-Training Detection of Backdoor Attacks for Two-Class and Multi-Attack Scenarios.
