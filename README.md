@@ -325,10 +325,16 @@
 - Post-Training Detection of Backdoor Attacks for Two-Class and Multi-Attack Scenarios.
   [[pdf]](https://arxiv.org/pdf/2201.08474.pdf)
   - Zhen Xiang, David J. Miller, and George Kesidis. *ICLR*, 2022.
+  - Detecting whether a classifier is backdoor attacked 
+  - These scenarios are first studied in the current paper, under the practical constraints that (1) the defender neither has access to the classifier’s training set nor (2) to supervision from clean reference classifiers trained for the same domain.
 
 - Detecting AI Trojans Using Meta Neural Analysis.
   [[pdf]](https://arxiv.org/pdf/1910.03137.pdf)
   - Xiaojun Xu, Qi Wang, Huichen Li, Nikita Borisov, Carl A. Gunter, and Bo Li. *IEEE S&P*, 2021.
+  - prior work impractical assumption: (1) ''all-to-one'' attack is easy to detect, (2) white-box access to the model, (3) clean-data and clean-labell backdoor attack is difficult to detect
+  - black-box access to the model, no need training data, need clean data
+
+<span style="color:blue">some *blue* text</span>.
 
 - Topological Detection of Trojaned Neural Networks.
   [[pdf]](https://arxiv.org/pdf/2106.06469.pdf)
