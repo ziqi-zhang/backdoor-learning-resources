@@ -334,6 +334,7 @@
   - prior work impractical assumption: (1) ''all-to-one'' attack is easy to detect, (2) white-box access to the model, (3) clean-data and clean-labell backdoor attack is difficult to detect
   - black-box access to the model, no need training data, need clean data
   - experiments cover CV, NLP, speech, tabular
+  - including a brief survey
 
 ```diff
 + SP21
@@ -342,28 +343,39 @@
 - Topological Detection of Trojaned Neural Networks.
   [[pdf]](https://arxiv.org/pdf/2106.06469.pdf)
   - Songzhu Zheng, Yikai Zhang, Hubert Wagner, Mayank Goswami, and Chao Chen. *NeurIPS*, 2021.
+  - there exists significant structural difference between clean and Trojaned networks.
+  - white-box detection
 
 - Black-box Detection of Backdoor Attacks with Limited Information and Data.
   [[pdf]](https://arxiv.org/pdf/2103.13127.pdf)
   - Yinpeng Dong, Xiao Yang, Zhijie Deng, Tianyu Pang, Zihao Xiao, Hang Su, and Jun Zhu. *ICCV*, 2021.
+  - including a brief survey
+  - need clean data to reverse-engineer the trigger 
 
 - Universal Litmus Patterns: Revealing Backdoor Attacks in CNNs.
   [[pdf]](https://arxiv.org/pdf/1906.10842.pdf)
   [[code]](https://umbcvision.github.io/Universal-Litmus-Patterns/)
   - Soheil Kolouri, Aniruddha Saha, Hamed Pirsiavash, and Heiko Hoffmann. *CVPR*, 2020.
+  - detect if the model has backdoor 
+  - do not need: 1) access to the training data or 2) running tests on the clean data
 
 - One-Pixel Signature: Characterizing CNN Models for Backdoor Detection.
   [[pdf]](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123720324.pdf)
   - Shanjiaoyang Huang, Weiqi Peng, Zhiwei Jia, and Zhuowen Tu. *ECCV*, 2020.
+  - detect if the black-box model has backdoor 
+
   
 - Practical Detection of Trojan Neural Networks: Data-Limited and Data-Free Cases.
   [[pdf]](https://arxiv.org/pdf/2007.15802.pdf)
   [[code]](https://github.com/wangren09/TrojanNetDetector)
   - Ren Wang, Gaoyuan Zhang, Sijia Liu, Pin-Yu Chen, Jinjun Xiong, and Meng Wang. *ECCV*, 2020.
+  - white-box backdoor model detection
+  - leverage the internal response of hidden neurons
 
 - Baseline Pruning-Based Approach to Trojan Detection in Neural Networks.
   [[pdf]](https://aisecure-workshop.github.io/aml-iclr2021/papers/17.pdf)
   - Peter Bajcsy and Michael Majurski. *ICLR Workshop*, 2021.
+  - classifies each NN model as clean or poisoned by learning a mapping between accuracy measurements and reference clean or poisoned NN model labels
 
 - Trojan Signatures in DNN Weights.
   [[pdf]](https://arxiv.org/pdf/2109.02836.pdf)
