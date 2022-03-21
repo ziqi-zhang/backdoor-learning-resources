@@ -149,8 +149,9 @@ reverse engineering the trigger
   - Huili Chen, Cheng Fu, Jishen Zhao, Farinaz Koushanfar. *IJCAI*, 2019.
   - data-free backdoor detection, w/o need of training data
   - the defender can leverage the trigger generator for adversarial training and invalidating the inserted backdoor.
+  - model inversion to reverse clean training image
 ```diff
-data-free detection, use trigger generator for adversarial training
++ data-free detection, use trigger generator for adversarial training
 ```
 
 - Backdoor Defense with Machine Unlearning.
@@ -160,12 +161,17 @@ data-free detection, use trigger generator for adversarial training
   - Use machine unlearning to erase backdoor. Specifically to use gradient ascent to unlearn backdoor, introduces a weighted penalty mechanism to mitigate catastrophic forgetting
   - the proposed approach gets rid of the reliance on the full access to training data for retraining, but still needs some clean data
 
+```diff
++ machine unlearning the poisoning sample, GAN generates trigger, needs some clean data
+```
+
 - Few-shot Backdoor Defense Using Shapley Estimation.
   [[pdf]](https://arxiv.org/pdf/2112.14889.pdf)
   - Jiyang Guan, Zhuozhuo Tu, Ran He, and Dacheng Tao. arXiv, 2021.
   - 1 image per class or even free of data
+  - use a loss to reconstruct the training image from poisoned model
 ```diff
-- prune & limited data
+- prune & limited data & data-free
 ```
 
 - CatchBackdoor: Backdoor Testing by Critical Trojan Neural Path Identification via Differential Fuzzing.
