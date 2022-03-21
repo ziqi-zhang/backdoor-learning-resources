@@ -62,6 +62,8 @@
   [[pdf]](https://arxiv.org/pdf/2005.00060.pdf)
   [[code]](https://github.com/IBM/model-sanitization)
   - Pu Zhao, Pin-Yu Chen, Payel Das, Karthikeyan Natesan Ramamurthy, and Xue Lin. *ICLR*, 2020.
+  - similar to transfer learning and fine-tuning
+  - needs a small set of bonafide data
 
 - Fine-Pruning: Defending Against Backdooring Attacks on Deep Neural Networks.
   [[pdf]](https://arxiv.org/pdf/1805.12185.pdf)
@@ -82,6 +84,7 @@
   [[pdf]](https://arxiv.org/pdf/2202.06312.pdf)
   - Bingxu Mu, Le Wang, and Zhenxing Niu. arXiv, 2022.
   - For an infected model, we observe that its adversarial examples have similar behaviors as its triggered samples.
+  - need clean data to generate adversarial samples
 
 
 #### Trigger Synthesis based Empirical Defense
@@ -94,13 +97,20 @@
 - Trigger Hunting with a Topological Prior for Trojan Detection.
   [[pdf]](https://arxiv.org/pdf/2110.08335.pdf)
   - Xiaoling Hu, Xiao Lin, Michael Cogswell, Yi Yao, Susmit Jha, and Chao Chen. *ICLR*, 2022.
-  -  recovering the triggers on a clean image by manipulating the model’s prediction.
-  -  perform effectively in cases with unknown target labels.
+  - target-label-agnostic reverse engineering method to 
+  - recovering multiple triggers on a clean image by manipulating the model’s prediction.
+  - perform effectively in cases with unknown target labels.
+
+```diff
+reverse engineering the trigger
+```
 
 - Black-box Detection of Backdoor Attacks with Limited Information and Data.
   [[pdf]](https://arxiv.org/pdf/2103.13127.pdf)
   - Yinpeng Dong, Xiao Yang, Zhijie Deng, Tianyu Pang, Zihao Xiao, Hang Su, and Jun Zhu. *ICCV*, 2021.
   -  blackbox backdoor detection 
+  -  assumption: neither the poisoned training data nor the white-box model can be acquired, with only query-access to the target model
+  -  needs clean data
   -  demonstrate the applicability of B3D when using synthetic samples (denoted as B3D-SS) in the case that the clean samples for optimization are unavailable.
 ```diff
 - use synthetic samples
@@ -110,12 +120,23 @@
   [[pdf]](https://arxiv.org/pdf/2102.05123.pdf)
   [[code]](https://github.com/PurduePAML/K-ARM_Backdoor_Optimization)
   - Guangyu Shen, Yingqi Liu, Guanhong Tao, Shengwei An, Qiuling Xu, Siyuan Cheng, Shiqing Ma, and Xiangyu Zhang. *ICML*, 2021.
+  - prior limitation: the scanning complexity is quadratic to the number of class labels 
+  - It usually assumes a small set of benign inputs for all the classes of the model but not any malicious inputs
+
+- Abs: Scanning neural networks for back-doors by artificial brain stimulation.
+  [[pdf]](https://dl.acm.org/doi/pdf/10.1145/3319535.3363216)
+  - Yingqi Liu, Wen-Chuan Lee, Guanhong Tao, Shiqing Ma, Yousra Aafer, Xiangyu Zhang, *CCS*, 2019
+  - Artificial Brain Stimulation (ABS) (Liu et al., 2019) systematically intercepts and changes internal neuron activation values on benign inputs, and then observes if consistent misclassification can be induced. -- Backdoor Scanning for Deep Neural Networks through K-Arm Optimization.
+
+
 
 - Neural Cleanse: Identifying and Mitigating Backdoor Attacks in Neural Networks.
   [[pdf]](https://gangw.web.illinois.edu/class/cs598/papers/sp19-poisoning-backdoor.pdf)
   [[code]](https://github.com/bolunwang/backdoor)
   - Bolun Wang, Yuanshun Yao, Shawn Shan, Huiying Li, Bimal Viswanath, Haitao Zheng, Ben Y. Zhao. *IEEE S&P*, 2019.
   - 10% of training data required in Neural Cleanse according to Few-shot Backdoor Defense Using Shapley Estimation [[pdf]](https://arxiv.org/pdf/2112.14889.pdf)
+  - Neural Cleanse (NC) (Wang et al., 2019) uses optimization to derive a trigger for each class and observes if there is any trigger that is exceptionally small and hence likely injected instead of naturally occurring feature. -- Backdoor Scanning for Deep Neural Networks through K-Arm Optimization.
+  - requires L\*L times of scaning, L is the number of output classes
 
 - Defending Neural Backdoors via Generative Distribution Modeling.
   [[pdf]](https://arxiv.org/pdf/1910.04749.pdf)
@@ -126,12 +147,18 @@
 - DeepInspect: A Black-box Trojan Detection and Mitigation Framework for Deep Neural Networks.
   [[pdf]](https://www.ijcai.org/proceedings/2019/0647.pdf)
   - Huili Chen, Cheng Fu, Jishen Zhao, Farinaz Koushanfar. *IJCAI*, 2019.
+  - data-free backdoor detection, w/o need of training data
+  - the defender can leverage the trigger generator for adversarial training and invalidating the inserted backdoor.
+```diff
+data-free detection, use trigger generator for adversarial training
+```
 
 - Backdoor Defense with Machine Unlearning.
   [[pdf]](https://arxiv.org/pdf/2201.09538.pdf)
   - Yang Liu, Mingyuan Fan, Cen Chen, Ximeng Liu, Zhuo Ma, Li Wang, and Jianfeng Ma. arXiv, 2022.
-  - Use machine unlearning to erase backdoor. Specifically to use gradient ascent to unlearn backdoor
-  - the proposed approach gets rid of the reliance on the full access to training data for retraining
+  - trigger reverse: use generative model to generate trigger
+  - Use machine unlearning to erase backdoor. Specifically to use gradient ascent to unlearn backdoor, introduces a weighted penalty mechanism to mitigate catastrophic forgetting
+  - the proposed approach gets rid of the reliance on the full access to training data for retraining, but still needs some clean data
 
 - Few-shot Backdoor Defense Using Shapley Estimation.
   [[pdf]](https://arxiv.org/pdf/2112.14889.pdf)
