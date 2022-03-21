@@ -22,7 +22,9 @@
 - [Discussion and Evaluation](#discussion-and-evaluation)
 - [Backdoor Attack for Positive Purposes](#backdoor-attack-for-positive-purposes)
 
+**source-agnostic**: triggers map all inputs to the target label, under the assumption that the features for identifying triggers are separated from those for classifying normal images.
 
+**source-specific**
 
 ## Image and Video Classification
 ### Poisoning-based Attack
@@ -473,30 +475,36 @@ use SVD to filter triggered inputs
 - Neural Network Trojans Analysis and Mitigation from the Input Domain.
   [[pdf]](https://arxiv.org/pdf/2202.06382.pdf)
   - Zhenting Wang, Hailun Ding, Juan Zhai, and Shiqing Ma. arXiv, 2022.
-
-- A General Framework for Defending Against Backdoor Attacks via Influence Graph.
-  [[pdf]](https://arxiv.org/pdf/2111.14309)
-  - Xiaofei Sun, Jiwei Li, Xiaoya Li, Ziyao Wang, Tianwei Zhang, Han Qiu, Fei Wu, and Chun Fan. arXiv, 2021.
+  - assumption:  a complete and accurate Trojan corresponds to a hyperplane decision region in the input domain
+  - design a novel training method that removes Trojans during training even on poisoned datasets
 
 - NTD: Non-Transferability Enabled Backdoor Detection.
   [[pdf]](https://arxiv.org/pdf/2111.11157.pdf)
   - Yinshan Li, Hua Ma, Zhi Zhang, Yansong Gao, Alsharif Abuadbba, Anmin Fu, Yifeng Zheng, Said F. Al-Sarawi, and Derek Abbott. arXiv, 2021.
+  - online input detection, offline preparation on the validation set to select hyper-parameters
+  - has a small survey
+  - target Security
 
 - A Unified Framework for Task-Driven Data Quality Management.
   [[pdf]](https://arxiv.org/pdf/2106.05484.pdf)
   - Tianhao Wang, Yi Zeng, Ming Jin, and Ruoxi Jia. arXiv, 2021.
+  - filter data during training time
 
 - TESDA: Transform Enabled Statistical Detection of Attacks in Deep Neural Networks.
   [[pdf]](https://arxiv.org/pdf/2110.08447.pdf)
   - Chandramouli Amarnath, Aishwarya H. Balwani, Kwondo Ma, and Abhijit Chatterjee. arXiv, 2021.
+  - online detection of attacks by exploiting the discrepancies they cause in the distributions of intermediate layer features of DNNs
 
 - Traceback of Data Poisoning Attacks in Neural Networks.
   [[pdf]](https://arxiv.org/pdf/2110.06904.pdf)
   - Shawn Shan, Arjun Nitin Bhagoji, Haitao Zheng, and Ben Y. Zhao. arXiv, 2021.
+  - three dirty-label and three clean-label attacks
+  - tracing back attack events to the root cause and fix the attack
 
 - Provable Guarantees against Data Poisoning Using Self-Expansion and Compatibility.
   [[pdf]](https://arxiv.org/pdf/2105.03692.pdf)
   - Charles Jin, Melinda Sun, and Martin Rinard. arXiv, 2021.
+  - iterative training procedure for removing poisoned data from the training set.
   
 - Online Defense of Trojaned Models using Misattributions.
   [[pdf]](https://arxiv.org/pdf/2103.15918.pdf)
