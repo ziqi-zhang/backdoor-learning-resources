@@ -170,7 +170,7 @@
   - Akshaj Kumar Veldanda, Kang Liu, Benjamin Tan, Prashanth Krishnamurthy, Farshad Khorrami, Ramesh Karri, Brendan Dolan-Gavitt, and Siddharth Garg. AISec21.
   - two stages. repairs a BadNet both pre-deployment and online in response to backdoored test inputs encountered in the field.
 
-#### Model Diagnosis based Empirical Defense
+#### Model Diagnosis based Empirical Defense - detect whether a model is backdoored
 - Post-Training Detection of Backdoor Attacks for Two-Class and Multi-Attack Scenarios.
   [[pdf]](https://arxiv.org/pdf/2201.08474.pdf)
   - Zhen Xiang, David J. Miller, and George Kesidis. *ICLR*, 2022.
