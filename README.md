@@ -2,23 +2,20 @@
 
 ## Table of Contents
 - [Image and Video Classification](#image-and-video-classification) 
-  - [Poisoning-based Attack](#poisoning-based-attack)
-  - [Non-poisoning-based Attack](#non-poisoning-based-attack)
-    - [Weights-oriented Attack](#weights-oriented-attack)
-    - [Structure-modified Attack](#structure-modified-attack)
-    - [Others](#others)
+
   - [Backdoor Defense](#backdoor-defense)
     - [Model Reconstruction based Empirical Defense](#model-reconstruction-based-empirical-defense)
     - [Trigger Synthesis based Empirical Defense](#trigger-synthesis-based-empirical-defense)
     - [Model Diagnosis based Empirical Defense](#model-diagnosis-based-empirical-defense)
-    - [Poison Suppression based Empirical Defense](#poison-suppression-based-empirical-defense)
     - [Sample Filtering based Empirical Defense](#sample-filtering-based-empirical-defense)
-    - [Certificated Defense](#certificated-defense)
+  - [Poisoning-based Attack](#poisoning-based-attack)
+  - [Non-poisoning-based Attack](#non-poisoning-based-attack)
+    - [Weights-oriented Attack](#weights-oriented-attack)
+    - [Structure-modified Attack](#structure-modified-attack)
 - [Attack and Defense Towards Other Paradigms and Tasks](#attack-and-defense-towards-other-paradigms-and-tasks) 
   - [Collaborative Learning](#collaborative-learning)
   - [Transfer Learning](#transfer-learning) 
   - [Malware Detection](#malware-detection)
-  - [Others](#others)
 - [Discussion and Evaluation](#discussion-and-evaluation)
 - [Backdoor Attack for Positive Purposes](#backdoor-attack-for-positive-purposes)
 
@@ -27,158 +24,8 @@
 **source-specific**
 
 ## Image and Video Classification
-### Poisoning-based Attack
-#### 2022
-
-- Label-Smoothed Backdoor Attack.
-  [[pdf]](https://arxiv.org/pdf/2202.11203.pdf)
-  - Minlong Peng, Zidi Xiong, Mingming Sun, and Ping Li. arXiv, 2022.
-
-- Imperceptible and Multi-channel Backdoor Attack against Deep Neural Networks.
-  [[pdf]](https://arxiv.org/pdf/2201.13164.pdf)
-  - Mingfu Xue, Shifeng Ni, Yinghao Wu, Yushu Zhang, Jian Wang, and Weiqiang Liu. arXiv, 2022.
-
-- Compression-Resistant Backdoor Attack against Deep Neural Networks.
-  [[pdf]](https://arxiv.org/pdf/2201.00672.pdf)
-  - Mingfu Xue, Xin Wang, Shichang Sun, Yushu Zhang, Jian Wang, and Weiqiang Liu. arXiv, 2022.
 
 
-#### 2021 
-- Invisible Backdoor Attack with Sample-Specific Triggers.
-  [[pdf]](https://arxiv.org/pdf/2012.03816.pdf)
-  [[code]](https://github.com/yuezunli/ISSBA)
-  - Yuezun Li, Yiming Li, Baoyuan Wu, Longkang Li, Ran He, and Siwei Lyu. *ICCV*, 2021.
-
-- Manipulating SGD with Data Ordering Attacks.
-  [[pdf]](https://arxiv.org/pdf/2104.09667.pdf)
-  - Ilia Shumailov, Zakhar Shumaylov, Dmitry Kazhdan, Yiren Zhao, Nicolas Papernot, Murat A. Erdogdu, and Ross Anderson. *NeurIPS*, 2021.
-
-- Backdoor Attack with Imperceptible Input and Latent Modification.
-  [[pdf]](https://proceedings.neurips.cc/paper/2021/file/9d99197e2ebf03fc388d09f1e94af89b-Paper.pdf)
-  - Khoa Doan, Yingjie Lao, and Ping Li. *NeurIPS*, 2021.
-
-- LIRA: Learnable, Imperceptible and Robust Backdoor Attacks.
-  [[pdf]](https://openaccess.thecvf.com/content/ICCV2021/papers/Doan_LIRA_Learnable_Imperceptible_and_Robust_Backdoor_Attacks_ICCV_2021_paper.pdf)
-  - Khoa Doan, Yingjie Lao, Weijie Zhao, and Ping Li. *ICCV*, 2021.
-
-- Blind Backdoors in Deep Learning Models. 
-  [[pdf]](https://arxiv.org/pdf/2005.03823.pdf)
-  [[code]](https://github.com/ebagdasa/backdoors101)
-  - Eugene Bagdasaryan, and Vitaly Shmatikov. *USENIX Security*, 2021.
-  - New kind of backdoor attack
-
-- Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification.
-  [[pdf]](https://arxiv.org/pdf/2012.11212.pdf)
-  [[code]](https://github.com/Megum1/DFST)
-  - Siyuan Cheng, Yingqi Liu, Shiqing Ma, and Xiangyu Zhang. *AAAI*, 2021.
-
-- WaNet - Imperceptible Warping-based Backdoor Attack.
-  [[pdf]](https://openreview.net/pdf?id=eEn8KTtJOx)
-  [[code]](https://github.com/VinAIResearch/Warping-based_Backdoor_Attack-release)
-  - Tuan Anh Nguyen, and Anh Tuan Tran. *ICLR*, 2021.
-
-- AdvDoor: Adversarial Backdoor Attack of Deep Learning System.
-  [[pdf]](http://www.wingtecher.com/themes/WingTecherResearch/assets/papers/issta21_learning.pdf)
-  [[code]](https://github.com/AdvDoor/AdvDoor)
-  - Quan Zhang, Yifeng Ding, Yongqiang Tian, Jianmin Guo, Min Yuan, and Yu Jiang. *ISSTA*, 2021.
-
-- DBIA: Data-free Backdoor Injection Attack against Transformer Networks.
-  [[pdf]](https://arxiv.org/pdf/2111.11870.pdf)
-  [[code]](https://anonymous.4open.science/r/DBIA-825D)
-  - Peizhuo Lv, Hualong Ma, Jiachen Zhou, Ruigang Liang, Kai Chen, Shengzhi Zhang, and Yunfei Yang. arXiv, 2021.
-
-- A Statistical Difference Reduction Method for Escaping Backdoor Detection.
-  [[pdf]](https://arxiv.org/pdf/2111.05077.pdf)
-  - Pengfei Xia, Hongjing Niu, Ziqiang Li, and Bin Li. arXiv, 2021.
-
-- Backdoor Attack through Frequency Domain.
-  [[pdf]](https://arxiv.org/pdf/2111.10991.pdf)
-  - Tong Wang, Yuan Yao, Feng Xu, Shengwei An, and Ting Wang. arXiv, 2021.
-
-- Check Your Other Door! Establishing Backdoor Attacks in the Frequency Domain.
-  [[pdf]](https://arxiv.org/pdf/2109.05507.pdf)
-  - Hasan Abed Al Kader Hammoud and Bernard Ghanem. arXiv, 2021.
-
-- Poison Ink: Robust and Invisible Backdoor Attack.
-  [[pdf]](https://arxiv.org/pdf/2108.02488.pdf)
-  - Jie zhang, Dongdong Chen, Jing Liao, Qidong Huang, Gang Hua, Weiming Zhang, and Nenghai Yu. arXiv, 2021.
-
-- Sleeper Agent: Scalable Hidden Trigger Backdoors for Neural Networks Trained from Scratch.
-  [[pdf]](https://arxiv.org/pdf/2106.08970.pdf)
-  [[code]](https://github.com/hsouri/Sleeper-Agent)
-  - Hossein Souri, Micah Goldblum, Liam Fowl, Rama Chellappa, and Tom Goldstein. arXiv, 2021.
- 
-- RABA: A Robust Avatar Backdoor Attack on Deep Neural Network.
-  [[pdf]](https://arxiv.org/pdf/2104.01026.pdf)
-  - Ying He, Zhili Shen, Chang Xia, Jingyu Hua, Wei Tong, and Sheng Zhong. arXiv, 2021.
-
-
-#### 2020
-
-- Composite Backdoor Attack for Deep Neural Network by Mixing Existing Benign Features.
-  [[pdf]](https://dl.acm.org/doi/pdf/10.1145/3372297.3423362)
-  - Junyu Lin, Lei Xu, Yingqi Liu, Xiangyu Zhang. *CCS*, 2020.
-
-- Input-Aware Dynamic Backdoor Attack. 
-  [[pdf]](https://arxiv.org/pdf/2010.08138.pdf)
-  [[code]](https://github.com/VinAIResearch/input-aware-backdoor-attack-release)
-  - Anh Nguyen, and Anh Tran. *NeurIPS 2020*.
-
-
-- Bypassing Backdoor Detection Algorithms in Deep Learning.
-  [[pdf]](https://arxiv.org/pdf/1905.13409.pdf)
-  - Te Juin Lester Tan, and Reza Shokri. *EuroS&P*, 2020.
-
-#### 2019
-
-- Label-Consistent Backdoor Attacks.
-  [[pdf]](https://arxiv.org/pdf/1912.02771.pdf)
-  [[code]](https://github.com/MadryLab/label-consistent-backdoor-code)
-  - Alexander Turner, Dimitris Tsipras, and Aleksander Madry. arXiv, 2019.
-
-#### 2018
-- Trojaning Attack on Neural Networks.
-  [[pdf]](https://docs.lib.purdue.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=2782&context=cstech)
-  [[code]](https://github.com/PurduePAML/TrojanNN)
-  - Yingqi Liu, Shiqing Ma, Yousra Aafer, Wen-Chuan Lee, and Juan Zhai. *NDSS*, 2018.
- 
-#### 2017
-- BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain.
-  [[pdf]](https://arxiv.org/pdf/1708.06733.pdf)
-  [[journal]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8685687)
-  - Tianyu Gu, Brendan Dolan-Gavitt, and Siddharth Garg. arXiv, 2017 (*IEEE Access*, 2019).
-
-- Targeted Backdoor Attacks on Deep Learning Systems Using Data Poisoning.
-  [[pdf]](https://arxiv.org/pdf/1712.05526.pdf)
-  [[code]](https://github.com/GeorgePisl/backdoor-attacks-based-on-deep-learning)
-  - Xinyun Chen, Chang Liu, Bo Li, Kimberly Lu, and Dawn Song. arXiv, 2017.  
-
-### Non-poisoning-based Attack 
-#### Weights-oriented Attack
-- ProFlip: Targeted Trojan Attack with Progressive Bit Flips. 
-  [[pdf]](https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_ProFlip_Targeted_Trojan_Attack_With_Progressive_Bit_Flips_ICCV_2021_paper.pdf)
-  - Huili Chen, Cheng Fu, Jishen Zhao, and Farinaz Koushanfar. *ICCV*, 2021.
-
-- TBT: Targeted Neural Network Attack with Bit Trojan.
-  [[pdf]](https://arxiv.org/abs/1909.05193)
-  [[code]](https://github.com/adnansirajrakin/TBT-CVPR2020)
-  - Adnan Siraj Rakin, Zhezhi He, and Deliang Fan. *CVPR*, 2020.
-
-- How to Inject Backdoors with Better Consistency: Logit Anchoring on Clean Data.
-  [[pdf]](https://arxiv.org/pdf/2109.01300.pdf)
-  - Zhiyuan Zhang, Lingjuan Lyu, Weiqiang Wang, Lichao Sun, and Xu Sun. *ICLR*, 2022.
-
- 
- #### Structure-modified Attack
-- DeepPayload: Black-box Backdoor Attack on Deep Learning Models through Neural Payload Injection.
-  [[pdf]](https://arxiv.org/pdf/2101.06896.pdf)
-  - Yuanchun Li, Jiayi Hua, Haoyu Wang, Chunyang Chen, and Yunxin Liu. *ICSE*, 2021.
- 
-- An Embarrassingly Simple Approach for Trojan Attack in Deep Neural Networks.
-  [[pdf]](https://arxiv.org/pdf/2006.08131.pdf)
-  [[code]](https://github.com/trx14/TrojanNet)
-  - Ruixiang Tang, Mengnan Du, Ninghao Liu, Fan Yang, and Xia Hu. *KDD*, 2020.
-  
 ### Backdoor Defense
 
 #### Model Reconstruction based Empirical Defense
@@ -529,6 +376,159 @@ use SVD to filter triggered inputs
 - Poison as a Cure: Detecting & Neutralizing Variable-Sized Backdoor Attacks in Deep Neural Networks.
   [[pdf]](https://arxiv.org/pdf/1911.08040.pdf)
   - Alvin Chan, and Yew-Soon Ong. arXiv, 2019.  
+  
+  
+### Poisoning-based Attack
+#### 2022
+
+- Label-Smoothed Backdoor Attack.
+  [[pdf]](https://arxiv.org/pdf/2202.11203.pdf)
+  - Minlong Peng, Zidi Xiong, Mingming Sun, and Ping Li. arXiv, 2022.
+
+- Imperceptible and Multi-channel Backdoor Attack against Deep Neural Networks.
+  [[pdf]](https://arxiv.org/pdf/2201.13164.pdf)
+  - Mingfu Xue, Shifeng Ni, Yinghao Wu, Yushu Zhang, Jian Wang, and Weiqiang Liu. arXiv, 2022.
+
+- Compression-Resistant Backdoor Attack against Deep Neural Networks.
+  [[pdf]](https://arxiv.org/pdf/2201.00672.pdf)
+  - Mingfu Xue, Xin Wang, Shichang Sun, Yushu Zhang, Jian Wang, and Weiqiang Liu. arXiv, 2022.
+
+
+#### 2021 
+- Invisible Backdoor Attack with Sample-Specific Triggers.
+  [[pdf]](https://arxiv.org/pdf/2012.03816.pdf)
+  [[code]](https://github.com/yuezunli/ISSBA)
+  - Yuezun Li, Yiming Li, Baoyuan Wu, Longkang Li, Ran He, and Siwei Lyu. *ICCV*, 2021.
+
+- Manipulating SGD with Data Ordering Attacks.
+  [[pdf]](https://arxiv.org/pdf/2104.09667.pdf)
+  - Ilia Shumailov, Zakhar Shumaylov, Dmitry Kazhdan, Yiren Zhao, Nicolas Papernot, Murat A. Erdogdu, and Ross Anderson. *NeurIPS*, 2021.
+
+- Backdoor Attack with Imperceptible Input and Latent Modification.
+  [[pdf]](https://proceedings.neurips.cc/paper/2021/file/9d99197e2ebf03fc388d09f1e94af89b-Paper.pdf)
+  - Khoa Doan, Yingjie Lao, and Ping Li. *NeurIPS*, 2021.
+
+- LIRA: Learnable, Imperceptible and Robust Backdoor Attacks.
+  [[pdf]](https://openaccess.thecvf.com/content/ICCV2021/papers/Doan_LIRA_Learnable_Imperceptible_and_Robust_Backdoor_Attacks_ICCV_2021_paper.pdf)
+  - Khoa Doan, Yingjie Lao, Weijie Zhao, and Ping Li. *ICCV*, 2021.
+
+- Blind Backdoors in Deep Learning Models. 
+  [[pdf]](https://arxiv.org/pdf/2005.03823.pdf)
+  [[code]](https://github.com/ebagdasa/backdoors101)
+  - Eugene Bagdasaryan, and Vitaly Shmatikov. *USENIX Security*, 2021.
+  - New kind of backdoor attack
+
+- Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification.
+  [[pdf]](https://arxiv.org/pdf/2012.11212.pdf)
+  [[code]](https://github.com/Megum1/DFST)
+  - Siyuan Cheng, Yingqi Liu, Shiqing Ma, and Xiangyu Zhang. *AAAI*, 2021.
+
+- WaNet - Imperceptible Warping-based Backdoor Attack.
+  [[pdf]](https://openreview.net/pdf?id=eEn8KTtJOx)
+  [[code]](https://github.com/VinAIResearch/Warping-based_Backdoor_Attack-release)
+  - Tuan Anh Nguyen, and Anh Tuan Tran. *ICLR*, 2021.
+
+- AdvDoor: Adversarial Backdoor Attack of Deep Learning System.
+  [[pdf]](http://www.wingtecher.com/themes/WingTecherResearch/assets/papers/issta21_learning.pdf)
+  [[code]](https://github.com/AdvDoor/AdvDoor)
+  - Quan Zhang, Yifeng Ding, Yongqiang Tian, Jianmin Guo, Min Yuan, and Yu Jiang. *ISSTA*, 2021.
+
+- DBIA: Data-free Backdoor Injection Attack against Transformer Networks.
+  [[pdf]](https://arxiv.org/pdf/2111.11870.pdf)
+  [[code]](https://anonymous.4open.science/r/DBIA-825D)
+  - Peizhuo Lv, Hualong Ma, Jiachen Zhou, Ruigang Liang, Kai Chen, Shengzhi Zhang, and Yunfei Yang. arXiv, 2021.
+
+- A Statistical Difference Reduction Method for Escaping Backdoor Detection.
+  [[pdf]](https://arxiv.org/pdf/2111.05077.pdf)
+  - Pengfei Xia, Hongjing Niu, Ziqiang Li, and Bin Li. arXiv, 2021.
+
+- Backdoor Attack through Frequency Domain.
+  [[pdf]](https://arxiv.org/pdf/2111.10991.pdf)
+  - Tong Wang, Yuan Yao, Feng Xu, Shengwei An, and Ting Wang. arXiv, 2021.
+
+- Check Your Other Door! Establishing Backdoor Attacks in the Frequency Domain.
+  [[pdf]](https://arxiv.org/pdf/2109.05507.pdf)
+  - Hasan Abed Al Kader Hammoud and Bernard Ghanem. arXiv, 2021.
+
+- Poison Ink: Robust and Invisible Backdoor Attack.
+  [[pdf]](https://arxiv.org/pdf/2108.02488.pdf)
+  - Jie zhang, Dongdong Chen, Jing Liao, Qidong Huang, Gang Hua, Weiming Zhang, and Nenghai Yu. arXiv, 2021.
+
+- Sleeper Agent: Scalable Hidden Trigger Backdoors for Neural Networks Trained from Scratch.
+  [[pdf]](https://arxiv.org/pdf/2106.08970.pdf)
+  [[code]](https://github.com/hsouri/Sleeper-Agent)
+  - Hossein Souri, Micah Goldblum, Liam Fowl, Rama Chellappa, and Tom Goldstein. arXiv, 2021.
+ 
+- RABA: A Robust Avatar Backdoor Attack on Deep Neural Network.
+  [[pdf]](https://arxiv.org/pdf/2104.01026.pdf)
+  - Ying He, Zhili Shen, Chang Xia, Jingyu Hua, Wei Tong, and Sheng Zhong. arXiv, 2021.
+
+
+#### 2020
+
+- Composite Backdoor Attack for Deep Neural Network by Mixing Existing Benign Features.
+  [[pdf]](https://dl.acm.org/doi/pdf/10.1145/3372297.3423362)
+  - Junyu Lin, Lei Xu, Yingqi Liu, Xiangyu Zhang. *CCS*, 2020.
+
+- Input-Aware Dynamic Backdoor Attack. 
+  [[pdf]](https://arxiv.org/pdf/2010.08138.pdf)
+  [[code]](https://github.com/VinAIResearch/input-aware-backdoor-attack-release)
+  - Anh Nguyen, and Anh Tran. *NeurIPS 2020*.
+
+
+- Bypassing Backdoor Detection Algorithms in Deep Learning.
+  [[pdf]](https://arxiv.org/pdf/1905.13409.pdf)
+  - Te Juin Lester Tan, and Reza Shokri. *EuroS&P*, 2020.
+
+#### 2019
+
+- Label-Consistent Backdoor Attacks.
+  [[pdf]](https://arxiv.org/pdf/1912.02771.pdf)
+  [[code]](https://github.com/MadryLab/label-consistent-backdoor-code)
+  - Alexander Turner, Dimitris Tsipras, and Aleksander Madry. arXiv, 2019.
+
+#### 2018
+- Trojaning Attack on Neural Networks.
+  [[pdf]](https://docs.lib.purdue.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=2782&context=cstech)
+  [[code]](https://github.com/PurduePAML/TrojanNN)
+  - Yingqi Liu, Shiqing Ma, Yousra Aafer, Wen-Chuan Lee, and Juan Zhai. *NDSS*, 2018.
+ 
+#### 2017
+- BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain.
+  [[pdf]](https://arxiv.org/pdf/1708.06733.pdf)
+  [[journal]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8685687)
+  - Tianyu Gu, Brendan Dolan-Gavitt, and Siddharth Garg. arXiv, 2017 (*IEEE Access*, 2019).
+
+- Targeted Backdoor Attacks on Deep Learning Systems Using Data Poisoning.
+  [[pdf]](https://arxiv.org/pdf/1712.05526.pdf)
+  [[code]](https://github.com/GeorgePisl/backdoor-attacks-based-on-deep-learning)
+  - Xinyun Chen, Chang Liu, Bo Li, Kimberly Lu, and Dawn Song. arXiv, 2017.  
+
+### Non-poisoning-based Attack 
+#### Weights-oriented Attack
+- ProFlip: Targeted Trojan Attack with Progressive Bit Flips. 
+  [[pdf]](https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_ProFlip_Targeted_Trojan_Attack_With_Progressive_Bit_Flips_ICCV_2021_paper.pdf)
+  - Huili Chen, Cheng Fu, Jishen Zhao, and Farinaz Koushanfar. *ICCV*, 2021.
+
+- TBT: Targeted Neural Network Attack with Bit Trojan.
+  [[pdf]](https://arxiv.org/abs/1909.05193)
+  [[code]](https://github.com/adnansirajrakin/TBT-CVPR2020)
+  - Adnan Siraj Rakin, Zhezhi He, and Deliang Fan. *CVPR*, 2020.
+
+- How to Inject Backdoors with Better Consistency: Logit Anchoring on Clean Data.
+  [[pdf]](https://arxiv.org/pdf/2109.01300.pdf)
+  - Zhiyuan Zhang, Lingjuan Lyu, Weiqiang Wang, Lichao Sun, and Xu Sun. *ICLR*, 2022.
+
+ 
+ #### Structure-modified Attack
+- DeepPayload: Black-box Backdoor Attack on Deep Learning Models through Neural Payload Injection.
+  [[pdf]](https://arxiv.org/pdf/2101.06896.pdf)
+  - Yuanchun Li, Jiayi Hua, Haoyu Wang, Chunyang Chen, and Yunxin Liu. *ICSE*, 2021.
+ 
+- An Embarrassingly Simple Approach for Trojan Attack in Deep Neural Networks.
+  [[pdf]](https://arxiv.org/pdf/2006.08131.pdf)
+  [[code]](https://github.com/trx14/TrojanNet)
+  - Ruixiang Tang, Mengnan Du, Ninghao Liu, Fan Yang, and Xia Hu. *KDD*, 2020.
   
 ## Attack and Defense Towards Other Paradigms and Tasks
 ### Collaborative Learning
