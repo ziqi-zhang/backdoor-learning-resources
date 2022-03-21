@@ -276,7 +276,14 @@ use SVD to filter triggered inputs
   [[pdf]](https://arxiv.org/pdf/1911.08040.pdf)
   - Alvin Chan, and Yew-Soon Ong. arXiv, 2019.  
   
+  
+
+
 #### Model Diagnosis based Empirical Defense - detect whether a model is backdoored
+
+<details>
+<summary>Backdoor detection</summary>
+
 - Post-Training Detection of Backdoor Attacks for Two-Class and Multi-Attack Scenarios.
   [[pdf]](https://arxiv.org/pdf/2201.08474.pdf)
   - Zhen Xiang, David J. Miller, and George Kesidis. *ICLR*, 2022.
@@ -379,8 +386,13 @@ use SVD to filter triggered inputs
   [[pdf]](https://arxiv.org/pdf/1911.07399.pdf)
   - Xijie Huang, Moustafa Alzantot, and Mani Srivastava. arXiv, 2019.
 
+</details>
   
 ### Poisoning-based Attack
+
+<details>
+<summary>Poison attack</summary>
+
 #### 2022
 
 - Label-Smoothed Backdoor Attack.
@@ -506,7 +518,13 @@ use SVD to filter triggered inputs
   [[code]](https://github.com/GeorgePisl/backdoor-attacks-based-on-deep-learning)
   - Xinyun Chen, Chang Liu, Bo Li, Kimberly Lu, and Dawn Song. arXiv, 2017.  
 
+</details>
+
 ### Non-poisoning-based Attack 
+
+<details>
+<summary>Non-poison attack</summary>
+
 #### Weights-oriented Attack
 - ProFlip: Targeted Trojan Attack with Progressive Bit Flips. 
   [[pdf]](https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_ProFlip_Targeted_Trojan_Attack_With_Progressive_Bit_Flips_ICCV_2021_paper.pdf)
@@ -532,6 +550,8 @@ use SVD to filter triggered inputs
   [[code]](https://github.com/trx14/TrojanNet)
   - Ruixiang Tang, Mengnan Du, Ninghao Liu, Fan Yang, and Xia Hu. *KDD*, 2020.
   
+</details>
+
 ## Attack and Defense Towards Other Paradigms and Tasks
 ### Collaborative Learning
 
