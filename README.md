@@ -6,8 +6,9 @@
   - [Backdoor Defense](#backdoor-defense)
     - [Model Reconstruction based Empirical Defense](#model-reconstruction-based-empirical-defense)
     - [Trigger Synthesis based Empirical Defense](#trigger-synthesis-based-empirical-defense)
-    - [Model Diagnosis based Empirical Defense](#model-diagnosis-based-empirical-defense)
     - [Sample Filtering based Empirical Defense](#sample-filtering-based-empirical-defense)
+    - [Model Diagnosis based Empirical Defense](#model-diagnosis-based-empirical-defense)
+    
   - [Poisoning-based Attack](#poisoning-based-attack)
   - [Non-poisoning-based Attack](#non-poisoning-based-attack)
     - [Weights-oriented Attack](#weights-oriented-attack)
@@ -170,108 +171,6 @@
   - Akshaj Kumar Veldanda, Kang Liu, Benjamin Tan, Prashanth Krishnamurthy, Farshad Khorrami, Ramesh Karri, Brendan Dolan-Gavitt, and Siddharth Garg. AISec21.
   - two stages. repairs a BadNet both pre-deployment and online in response to backdoored test inputs encountered in the field.
 
-#### Model Diagnosis based Empirical Defense - detect whether a model is backdoored
-- Post-Training Detection of Backdoor Attacks for Two-Class and Multi-Attack Scenarios.
-  [[pdf]](https://arxiv.org/pdf/2201.08474.pdf)
-  - Zhen Xiang, David J. Miller, and George Kesidis. *ICLR*, 2022.
-  - Detecting whether a classifier is backdoor attacked 
-  - These scenarios are first studied in the current paper, under the practical constraints that (1) the defender neither has access to the classifier’s training set nor (2) to supervision from clean reference classifiers trained for the same domain.
-
-- Detecting AI Trojans Using Meta Neural Analysis.
-  [[pdf]](https://arxiv.org/pdf/1910.03137.pdf)
-  - Xiaojun Xu, Qi Wang, Huichen Li, Nikita Borisov, Carl A. Gunter, and Bo Li. *IEEE S&P*, 2021.
-  - prior work impractical assumption: (1) ''all-to-one'' attack is easy to detect, (2) white-box access to the model, (3) clean-data and clean-labell backdoor attack is difficult to detect
-  - black-box access to the model, no need training data, need clean data
-  - experiments cover CV, NLP, speech, tabular
-  - including a brief survey
-
-```diff
-+ SP21
-```
-
-- Topological Detection of Trojaned Neural Networks.
-  [[pdf]](https://arxiv.org/pdf/2106.06469.pdf)
-  - Songzhu Zheng, Yikai Zhang, Hubert Wagner, Mayank Goswami, and Chao Chen. *NeurIPS*, 2021.
-  - there exists significant structural difference between clean and Trojaned networks.
-  - white-box detection
-
-- Black-box Detection of Backdoor Attacks with Limited Information and Data.
-  [[pdf]](https://arxiv.org/pdf/2103.13127.pdf)
-  - Yinpeng Dong, Xiao Yang, Zhijie Deng, Tianyu Pang, Zihao Xiao, Hang Su, and Jun Zhu. *ICCV*, 2021.
-  - including a brief survey
-  - need clean data to reverse-engineer the trigger 
-
-- Universal Litmus Patterns: Revealing Backdoor Attacks in CNNs.
-  [[pdf]](https://arxiv.org/pdf/1906.10842.pdf)
-  [[code]](https://umbcvision.github.io/Universal-Litmus-Patterns/)
-  - Soheil Kolouri, Aniruddha Saha, Hamed Pirsiavash, and Heiko Hoffmann. *CVPR*, 2020.
-  - detect if the model has backdoor 
-  - do not need: 1) access to the training data or 2) running tests on the clean data
-
-- One-Pixel Signature: Characterizing CNN Models for Backdoor Detection.
-  [[pdf]](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123720324.pdf)
-  - Shanjiaoyang Huang, Weiqi Peng, Zhiwei Jia, and Zhuowen Tu. *ECCV*, 2020.
-  - detect if the black-box model has backdoor 
-
-  
-- Practical Detection of Trojan Neural Networks: Data-Limited and Data-Free Cases.
-  [[pdf]](https://arxiv.org/pdf/2007.15802.pdf)
-  [[code]](https://github.com/wangren09/TrojanNetDetector)
-  - Ren Wang, Gaoyuan Zhang, Sijia Liu, Pin-Yu Chen, Jinjun Xiong, and Meng Wang. *ECCV*, 2020.
-  - white-box backdoor model detection
-  - leverage the internal response of hidden neurons
-
-- Baseline Pruning-Based Approach to Trojan Detection in Neural Networks.
-  [[pdf]](https://aisecure-workshop.github.io/aml-iclr2021/papers/17.pdf)
-  - Peter Bajcsy and Michael Majurski. *ICLR Workshop*, 2021.
-  - classifies each NN model as clean or poisoned by learning a mapping between accuracy measurements and reference clean or poisoned NN model labels
-
-- Trojan Signatures in DNN Weights.
-  [[pdf]](https://arxiv.org/pdf/2109.02836.pdf)
-  - Greg Fields, Mohammad Samragh, Mojan Javaheripi, Farinaz Koushanfar, and Tara Javidi. arXiv, 2021.
-  - no need training/test data, no assumption of the nature of the trigger
-  - analyze the final linear weights
-
-- EX-RAY: Distinguishing Injected Backdoor from Natural Features in Neural Networks by Examining Differential Feature Symmetry.
-  [[pdf]](https://arxiv.org/pdf/2103.08820.pdf)
-  - Yingqi Liu, Guangyu Shen, Guanhong Tao, Zhenting Wang, Shiqing Ma, and Xiangyu Zhang. arXiv, 2021.
-  - develop a novel symmetric feature differencing method that identifies a smallest set of features separating two classes
-
-- TOP: Backdoor Detection in Neural Networks via Transferability of Perturbation.
-  [[pdf]](https://arxiv.org/pdf/2103.10274.pdf)
-  - Todd Huster and Emmanuel Ekwedike. arXiv, 2021.
-  - w/o training data nor triger pattern
-  - adversarial perturbations transfer from image to image more readily in poisoned models than in clean models
-
-- Detecting Trojaned DNNs Using Counterfactual Attributions.
-  [[pdf]](https://arxiv.org/pdf/2012.02275.pdf)
-  - code https://github.com/SRI-CSL/Trinity-TrojAI
-  - Karan Sikka, Indranil Sur, Susmit Jha, Anirban Roy, and Ajay Divakaran. arXiv, 2021.
-  - the trigger behavior depends on a few ghost neurons that activate on trigger pattern and exhibit abnormally higher relative attribution for wrong decisions when activated
-
-- Adversarial examples are useful too!
-  [[pdf]](https://arxiv.org/pdf/2005.06107.pdf)
-  [[code]](https://github.com/aliborji/Backdoor_defense)
-  - XBorji A. arXiv, 2020.
-  - tell whether a model has been subject to a backdoor attack.
-
-- Cassandra: Detecting Trojaned Networks from Adversarial Perturbations.
-  [[pdf]](https://arxiv.org/pdf/2007.14433.pdf)
-  - Xiaoyu Zhang, Ajmal Mian, Rohit Gupta, Nazanin Rahnavard, and Mubarak Shah. arXiv, 2020.
-  - verify if a pre-trained model is Trojaned or benign
-  
-- Odyssey: Creation, Analysis and Detection of Trojan Models.
-  [[pdf]](https://arxiv.org/pdf/2007.08142.pdf)
-  [[dataset]](https://lcwn-lab.github.io/Odessey/)
-  - Marzieh Edraki, Nazmul Karim, Nazanin Rahnavard, Ajmal Mian, and Mubarak Shah. arXiv, 2020.
-
-- Noise-response Analysis for Rapid Detection of Backdoors in Deep Neural Networks.
-  [[pdf]](https://arxiv.org/pdf/2008.00123.pdf)
-  - N. Benjamin Erichson, Dane Taylor, Qixuan Wu, and Michael W. Mahoney. arXiv, 2020.
-
-- NeuronInspect: Detecting Backdoors in Neural Networks via Output Explanations.
-  [[pdf]](https://arxiv.org/pdf/1911.07399.pdf)
-  - Xijie Huang, Moustafa Alzantot, and Mani Srivastava. arXiv, 2019.
 
 
 
@@ -377,6 +276,109 @@ use SVD to filter triggered inputs
   [[pdf]](https://arxiv.org/pdf/1911.08040.pdf)
   - Alvin Chan, and Yew-Soon Ong. arXiv, 2019.  
   
+#### Model Diagnosis based Empirical Defense - detect whether a model is backdoored
+- Post-Training Detection of Backdoor Attacks for Two-Class and Multi-Attack Scenarios.
+  [[pdf]](https://arxiv.org/pdf/2201.08474.pdf)
+  - Zhen Xiang, David J. Miller, and George Kesidis. *ICLR*, 2022.
+  - Detecting whether a classifier is backdoor attacked 
+  - These scenarios are first studied in the current paper, under the practical constraints that (1) the defender neither has access to the classifier’s training set nor (2) to supervision from clean reference classifiers trained for the same domain.
+
+- Detecting AI Trojans Using Meta Neural Analysis.
+  [[pdf]](https://arxiv.org/pdf/1910.03137.pdf)
+  - Xiaojun Xu, Qi Wang, Huichen Li, Nikita Borisov, Carl A. Gunter, and Bo Li. *IEEE S&P*, 2021.
+  - prior work impractical assumption: (1) ''all-to-one'' attack is easy to detect, (2) white-box access to the model, (3) clean-data and clean-labell backdoor attack is difficult to detect
+  - black-box access to the model, no need training data, need clean data
+  - experiments cover CV, NLP, speech, tabular
+  - including a brief survey
+
+```diff
++ SP21
+```
+
+- Topological Detection of Trojaned Neural Networks.
+  [[pdf]](https://arxiv.org/pdf/2106.06469.pdf)
+  - Songzhu Zheng, Yikai Zhang, Hubert Wagner, Mayank Goswami, and Chao Chen. *NeurIPS*, 2021.
+  - there exists significant structural difference between clean and Trojaned networks.
+  - white-box detection
+
+- Black-box Detection of Backdoor Attacks with Limited Information and Data.
+  [[pdf]](https://arxiv.org/pdf/2103.13127.pdf)
+  - Yinpeng Dong, Xiao Yang, Zhijie Deng, Tianyu Pang, Zihao Xiao, Hang Su, and Jun Zhu. *ICCV*, 2021.
+  - including a brief survey
+  - need clean data to reverse-engineer the trigger 
+
+- Universal Litmus Patterns: Revealing Backdoor Attacks in CNNs.
+  [[pdf]](https://arxiv.org/pdf/1906.10842.pdf)
+  [[code]](https://umbcvision.github.io/Universal-Litmus-Patterns/)
+  - Soheil Kolouri, Aniruddha Saha, Hamed Pirsiavash, and Heiko Hoffmann. *CVPR*, 2020.
+  - detect if the model has backdoor 
+  - do not need: 1) access to the training data or 2) running tests on the clean data
+
+- One-Pixel Signature: Characterizing CNN Models for Backdoor Detection.
+  [[pdf]](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123720324.pdf)
+  - Shanjiaoyang Huang, Weiqi Peng, Zhiwei Jia, and Zhuowen Tu. *ECCV*, 2020.
+  - detect if the black-box model has backdoor 
+
+  
+- Practical Detection of Trojan Neural Networks: Data-Limited and Data-Free Cases.
+  [[pdf]](https://arxiv.org/pdf/2007.15802.pdf)
+  [[code]](https://github.com/wangren09/TrojanNetDetector)
+  - Ren Wang, Gaoyuan Zhang, Sijia Liu, Pin-Yu Chen, Jinjun Xiong, and Meng Wang. *ECCV*, 2020.
+  - white-box backdoor model detection
+  - leverage the internal response of hidden neurons
+
+- Baseline Pruning-Based Approach to Trojan Detection in Neural Networks.
+  [[pdf]](https://aisecure-workshop.github.io/aml-iclr2021/papers/17.pdf)
+  - Peter Bajcsy and Michael Majurski. *ICLR Workshop*, 2021.
+  - classifies each NN model as clean or poisoned by learning a mapping between accuracy measurements and reference clean or poisoned NN model labels
+
+- Trojan Signatures in DNN Weights.
+  [[pdf]](https://arxiv.org/pdf/2109.02836.pdf)
+  - Greg Fields, Mohammad Samragh, Mojan Javaheripi, Farinaz Koushanfar, and Tara Javidi. arXiv, 2021.
+  - no need training/test data, no assumption of the nature of the trigger
+  - analyze the final linear weights
+
+- EX-RAY: Distinguishing Injected Backdoor from Natural Features in Neural Networks by Examining Differential Feature Symmetry.
+  [[pdf]](https://arxiv.org/pdf/2103.08820.pdf)
+  - Yingqi Liu, Guangyu Shen, Guanhong Tao, Zhenting Wang, Shiqing Ma, and Xiangyu Zhang. arXiv, 2021.
+  - develop a novel symmetric feature differencing method that identifies a smallest set of features separating two classes
+
+- TOP: Backdoor Detection in Neural Networks via Transferability of Perturbation.
+  [[pdf]](https://arxiv.org/pdf/2103.10274.pdf)
+  - Todd Huster and Emmanuel Ekwedike. arXiv, 2021.
+  - w/o training data nor triger pattern
+  - adversarial perturbations transfer from image to image more readily in poisoned models than in clean models
+
+- Detecting Trojaned DNNs Using Counterfactual Attributions.
+  [[pdf]](https://arxiv.org/pdf/2012.02275.pdf)
+  - code https://github.com/SRI-CSL/Trinity-TrojAI
+  - Karan Sikka, Indranil Sur, Susmit Jha, Anirban Roy, and Ajay Divakaran. arXiv, 2021.
+  - the trigger behavior depends on a few ghost neurons that activate on trigger pattern and exhibit abnormally higher relative attribution for wrong decisions when activated
+
+- Adversarial examples are useful too!
+  [[pdf]](https://arxiv.org/pdf/2005.06107.pdf)
+  [[code]](https://github.com/aliborji/Backdoor_defense)
+  - XBorji A. arXiv, 2020.
+  - tell whether a model has been subject to a backdoor attack.
+
+- Cassandra: Detecting Trojaned Networks from Adversarial Perturbations.
+  [[pdf]](https://arxiv.org/pdf/2007.14433.pdf)
+  - Xiaoyu Zhang, Ajmal Mian, Rohit Gupta, Nazanin Rahnavard, and Mubarak Shah. arXiv, 2020.
+  - verify if a pre-trained model is Trojaned or benign
+  
+- Odyssey: Creation, Analysis and Detection of Trojan Models.
+  [[pdf]](https://arxiv.org/pdf/2007.08142.pdf)
+  [[dataset]](https://lcwn-lab.github.io/Odessey/)
+  - Marzieh Edraki, Nazmul Karim, Nazanin Rahnavard, Ajmal Mian, and Mubarak Shah. arXiv, 2020.
+
+- Noise-response Analysis for Rapid Detection of Backdoors in Deep Neural Networks.
+  [[pdf]](https://arxiv.org/pdf/2008.00123.pdf)
+  - N. Benjamin Erichson, Dane Taylor, Qixuan Wu, and Michael W. Mahoney. arXiv, 2020.
+
+- NeuronInspect: Detecting Backdoors in Neural Networks via Output Explanations.
+  [[pdf]](https://arxiv.org/pdf/1911.07399.pdf)
+  - Xijie Huang, Moustafa Alzantot, and Mani Srivastava. arXiv, 2019.
+
   
 ### Poisoning-based Attack
 #### 2022
