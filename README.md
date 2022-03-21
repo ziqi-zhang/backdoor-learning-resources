@@ -536,6 +536,7 @@ use SVD to filter triggered inputs
 - DeepSight: Mitigating Backdoor Attacks in Federated Learning Through Deep Model Inspection.
   [[pdf]](https://arxiv.org/pdf/2201.00763.pdf)
   - Phillip Rieger, Thien Duc Nguyen, Markus Miettinen, and Ahmad-Reza Sadeghi. *NDSS*, 2022.
+  - model filtering approach for mitigating backdoor attacks
 
 - Defending Label Inference and Backdoor Attacks in Vertical Federated Learning.
   [[pdf]](https://arxiv.org/pdf/2112.05409.pdf)
@@ -568,10 +569,8 @@ use SVD to filter triggered inputs
 - ARIBA: Towards Accurate and Robust Identification of Backdoor Attacks in Federated Learning.
   [[pdf]](https://arxiv.org/pdf/2202.04311.pdf)
   - Yuxi Mi, Jihong Guan, and Shuigeng Zhou. arXiv, 2022.
-
-- More is Better (Mostly): On the Backdoor Attacks in Federated Graph Neural Networks.
-  [[pdf]](https://arxiv.org/pdf/2202.03195.pdf)
-  - Jing Xu, Rui Wang, Kaitai Liang, and Stjepan Picek. arXiv, 2022.
+  - backdoor attacks are discernible by the filters of CNN layers
+  - unsupervised anomaly detection to evaluate the pre-processed filters and calculate an anomaly score for each client
 
 - Low-Loss Subspace Compression for Clean Gains against Multi-Agent Backdoor Attacks.
   [[pdf]](https://arxiv.org/pdf/2203.03692.pdf)
@@ -584,6 +583,12 @@ use SVD to filter triggered inputs
 - Federated Unlearning with Knowledge Distillation.
   [[pdf]](https://arxiv.org/pdf/2201.09441.pdf)
   - Chen Wu, Sencun Zhu, and Prasenjit Mitra. arXiv, 2022.
+  - 6 pages
+  - knowledge distillation is used to recover accuracy
+
+```diff
+unlearning & KD
+```
 
 - Model Transferring Attacks to Backdoor HyperNetwork in Personalized Federated Learning.
   [[pdf]](https://arxiv.org/pdf/2201.07063.pdf)
@@ -614,6 +619,10 @@ use SVD to filter triggered inputs
   [[pdf]](https://arxiv.org/pdf/2101.02281.pdf)
   - Thien Duc Nguyen, Phillip Rieger, Hossein Yalame, Helen Möllering, Hossein Fereidooni, Samuel Marchal, Markus Miettinen, Azalia Mirhoseini, Ahmad-Reza Sadeghi, Thomas Schneider, and Shaza Zeitouni. arXiv, 2021.
 
+```diff
+USENIX Security 21
+```
+
 - Toward Robustness and Privacy in Federated Learning: Experimenting with Local and Central Differential Privacy.
   [[pdf]](https://arxiv.org/pdf/2009.03561.pdf)
   - Mohammad Naseri, Jamie Hayes, and Emiliano De Cristofaro. arXiv, 2020.
@@ -630,26 +639,6 @@ use SVD to filter triggered inputs
   [[pdf]](https://arxiv.org/pdf/2010.07808.pdf)
   - Raouf Kerkouche, Gergely Ács, and Claude Castelluccia. arXiv, 2020.
 
-- BlockFLA: Accountable Federated Learning via Hybrid Blockchain Architecture.
-  [[pdf]](https://arxiv.org/pdf/2010.07427.pdf)
-  - Harsh Bimal Desai, Mustafa Safa Ozdayi, and Murat Kantarcioglu. arXiv, 2020.
-
-- Mitigating Backdoor Attacks in Federated Learning.
-  [[pdf]](https://arxiv.org/pdf/2011.01767.pdf)
-  - Chen Wu, Xian Yang, Sencun Zhu, and Prasenjit Mitra. arXiv, 2020.
-
-- BaFFLe: Backdoor detection via Feedback-based Federated Learning.
-  [[pdf]](https://arxiv.org/pdf/2011.02167.pdf)
-  - ebastien Andreina, Giorgia Azzurra Marson, Helen Möllering, and Ghassan Karame. arXiv, 2020.
-
-- Learning to Detect Malicious Clients for Robust Federated Learning. 
-  [[pdf]](https://arxiv.org/pdf/2002.00211.pdf)
-  - Suyi Li, Yong Cheng, Wei Wang, Yang Liu, and Tianjian Chen. arXiv, 2020.
-  
-- Attack-Resistant Federated Learning with Residual-based Reweighting.
-  [[pdf]](https://arxiv.org/pdf/1912.11464.pdf)
-  [[code]](https://github.com/fushuhao6/Attack-Resistant-Federated-Learning)
-  - Shuhao Fu, Chulin Xie, Bo Li, and Qifeng Chen. arXiv, 2019.
 
 
 ### Transfer Learning
@@ -720,11 +709,6 @@ use SVD to filter triggered inputs
 - Rethinking the Backdoor Attacks' Triggers: A Frequency Perspective.
   [[pdf]](https://arxiv.org/pdf/2104.03413.pdf)
   - Yi Zeng, Won Park, Z. Morley Mao, and Ruoxi Jia. *ICCV*, 2021.
-
-- Backdoor Attacks Against Deep Learning Systems in the Physical World.
-  [[pdf]](https://arxiv.org/pdf/2006.14580.pdf)
-  [[Master Thesis]](https://newtraell.cs.uchicago.edu/files/ms_paper/ewillson.pdf)
-  - Emily Wenger, Josephine Passanati, Yuanshun Yao, Haitao Zheng, and Ben Y. Zhao. *CVPR*, 2021.
 
 - Can Optical Trojans Assist Adversarial Perturbations?
   [[pdf]](https://openaccess.thecvf.com/content/ICCV2021W/AROW/papers/Boloor_Can_Optical_Trojans_Assist_Adversarial_Perturbations_ICCVW_2021_paper.pdf)
