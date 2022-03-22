@@ -154,6 +154,16 @@ reverse engineering the trigger
 + data-free detection, use trigger generator for adversarial training
 ```
 
+- GangSweep: Sweep out Neural Backdoors by GAN
+  [[pdf]](https://dl.acm.org/doi/pdf/10.1145/3394171.3413546)
+  - *MM*, 2020
+  - use GAN to detect and sweep out NN backdoors
+  - GAN to generate triggers and artifacts of the target class
+  - outlier detection mechanism that can make a clear distinction between the trigger and the ordinary adversarial perturbations
+  - correct the labels of the backdoor samples and completely clean out the infected model through finetuning.
+  - needs validation data
+
+
 - Backdoor Defense with Machine Unlearning.
   [[pdf]](https://arxiv.org/pdf/2201.09538.pdf)
   - Yang Liu, Mingyuan Fan, Cen Chen, Ximeng Liu, Zhuo Ma, Li Wang, and Jianfeng Ma. arXiv, 2022.
@@ -185,26 +195,26 @@ reverse engineering the trigger
   - 6 pages
   - detect and remove watermark in deep neural networks via generative adversarial networks (GAN)
   - 1. use the GAN and few clean images to detect and reverse the watermark in the DNN model. 2. fine-tune the watermarked DNN
+  - needs training data
 
 - TAD: Trigger Approximation based Black-box Trojan Detection for AI.
   [[pdf]](https://arxiv.org/pdf/2102.01815.pdf)
   - Xinqiao Zhang, Huili Chen, and Farinaz Koushanfar. arXiv, 2021.
   - 6 pages
-  - 
+  - backdoor detection, no mitigation
 
 - Scalable Backdoor Detection in Neural Networks.
   [[pdf]](https://arxiv.org/pdf/2006.05646.pdf)
   - Haripriya Harikumar, Vuong Le, Santu Rana, Sourangshu Bhattacharya, Sunil Gupta, and Svetha Venkatesh. arXiv, 2020.
   -  computational complexity does not scale with the number of labels 
   -  is based on a measure that is both interpretable and universal across different network and patch types.
+  -  backdoor detection, no mitigation
 
 - NNoculation: Broad Spectrum and Targeted Treatment of Backdoored DNNs.
   [[pdf]](https://arxiv.org/pdf/2002.08313.pdf)
   [[code]](https://github.com/akshajkumarv/NNoculation)
   - Akshaj Kumar Veldanda, Kang Liu, Benjamin Tan, Prashanth Krishnamurthy, Farshad Khorrami, Ramesh Karri, Brendan Dolan-Gavitt, and Siddharth Garg. AISec21.
   - two stages. repairs a BadNet both pre-deployment and online in response to backdoored test inputs encountered in the field.
-
-
 
 
 #### Sample Filtering based Empirical Defense
