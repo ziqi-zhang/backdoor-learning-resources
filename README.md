@@ -181,6 +181,7 @@ reverse engineering the trigger
   - Jiyang Guan, Zhuozhuo Tu, Ran He, and Dacheng Tao. arXiv, 2021.
   - 1 image per class or even free of data
   - use a loss to reconstruct the training image from poisoned model
+  - 
 ```diff
 - prune & limited data & data-free
 ```
