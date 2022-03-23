@@ -150,8 +150,9 @@ reverse engineering the trigger
   - data-free backdoor detection, w/o need of training data
   - the defender can leverage the trigger generator for adversarial training and invalidating the inserted backdoor.
   - model inversion to reverse clean training image
+  - only detect whether the model has backdoor, no patching
 ```diff
-+ data-free detection, use trigger generator for adversarial training
++ data-free detection, use GAN to generate trigger, no patching
 ```
 
 - GangSweep: Sweep out Neural Backdoors by GAN
