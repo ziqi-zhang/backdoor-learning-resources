@@ -258,6 +258,10 @@ reverse engineering the trigger
 use SVD to filter triggered inputs
 ```
 
+- PiDAn: A Coherence Optimization Approach for Backdoor Attack Detection and Mitigation in Deep Neural Networks.
+  [[pdf]](https://arxiv.org/pdf/2203.09289.pdf)
+  - Yue Wang, Wenqing Li, Esha Sarkar, Muhammad Shafique, Michail Maniatakos, and Saif Eddin Jabari. arXiv, 2022.
+
 - Towards Effective and Robust Neural Trojan Defenses via Input Filtering.
   [[pdf]](https://arxiv.org/pdf/2202.12154.pdf)
   - Kien Do, Haripriya Harikumar, Hung Le, Dung Nguyen, Truyen Tran, Santu Rana, Dang Nguyen, Willy Susilo, and Svetha Venkatesh. arXiv, 2022.
@@ -331,6 +335,7 @@ use SVD to filter triggered inputs
 
 - Post-Training Detection of Backdoor Attacks for Two-Class and Multi-Attack Scenarios.
   [[pdf]](https://arxiv.org/pdf/2201.08474.pdf)
+  [[code]](https://github.com/zhenxianglance/2ClassBADetection)
   - Zhen Xiang, David J. Miller, and George Kesidis. *ICLR*, 2022.
   - Detecting whether a classifier is backdoor attacked 
   - These scenarios are first studied in the current paper, under the practical constraints that (1) the defender neither has access to the classifier’s training set nor (2) to supervision from clean reference classifiers trained for the same domain.
@@ -629,6 +634,29 @@ use SVD to filter triggered inputs
   [[pdf]](https://arxiv.org/pdf/2007.03767.pdf)
   - Mustafa Safa Ozdayi, Murat Kantarcioglu, and Yulia R. Gel. *AAAI*, 2021.
 
+
+- The Limitations of Federated Learning in Sybil Settings.
+  [[pdf]](https://www.cs.ubc.ca/~bestchai/papers/foolsgold-raid2020.pdf)
+  [[extension]](https://arxiv.org/pdf/1808.04866.pdf)
+  [[code]](https://github.com/DistributedML/FoolsGold)
+  - Clement Fung, Chris J.M. Yoon, and Ivan Beschastnikh. *RAID*, 2020 (arXiv, 2018).
+
+- BEAS: Blockchain Enabled Asynchronous & Secure Federated Machine Learning.
+  [[pdf]](https://arxiv.org/pdf/2202.02817.pdf)
+  - Arup Mondal, Harpreet Virk, and Debayan Gupta. *AAAI Workshop*, 2022.
+  
+- Backdoor Attacks and Defenses in Feature-partitioned Collaborative Learning.
+  [[pdf]](https://arxiv.org/pdf/2007.03608.pdf)
+  - Yang Liu, Zhihao Yi, and Tianjian Chen. *ICML Workshop*, 2020.
+
+- Can You Really Backdoor Federated Learning?
+  [[pdf]](https://arxiv.org/pdf/1911.07963.pdf)
+  - Ziteng Sun, Peter Kairouz, Ananda Theertha Suresh, and H. Brendan McMahan. *NeurIPS Workshop*, 2019.
+
+- Client-Wise Targeted Backdoor in Federated Learning.
+  [[pdf]](https://arxiv.org/pdf/2203.08689.pdf)
+  - Gorka Abad, Servio Paguada, Stjepan Picek, Víctor Julio Ramírez-Durán, and Aitor Urbieta. arXiv, 2022.
+
 - Backdoor Defense in Federated Learning Using Differential Testing and Outlier Detection.
   [[pdf]](https://arxiv.org/pdf/2202.11196.pdf)
   - Yein Kim, Huili Chen, and Farinaz Koushanfar. arXiv, 2022.
@@ -829,6 +857,10 @@ USENIX Security 21
   - N. Benjamin Erichson, Dane Taylor, Qixuan Wu, and Michael W. Mahoney. arXiv, 2020.
 
 ## Backdoor Attack for Positive Purposes
+- Neural Network Surgery: Injecting Data Patterns into Pre-trained Models with Minimal Instance-wise Side Effects.
+  [[pdf]](https://aclanthology.org/2021.naacl-main.430.pdf) 
+  - Zhiyuan Zhang, Xuancheng Ren, Qi Su, Xu Sun and Bin He. *NAACL-HLT*, 2021.
+
 - What Do You See? Evaluation of Explainable Artificial Intelligence (XAI) Interpretability through Neural Backdoors.
   [[pdf]](https://arxiv.org/pdf/2009.10639.pdf)
   - Yi-Shan Lin, Wen-Chuan Lee, and Z. Berkay Celik. *KDD*, 2021.
