@@ -606,6 +606,74 @@ use SVD to filter triggered inputs
   
 </details>
 
+## Security Conferences
+### S&P22
+- SoK: How Robust is Image Classification Deep Neural Network Watermarking?
+  [[pdf]](https://arxiv.org/pdf/2108.04974.pdf)
+
+### Security22
+
+### CCS22
+
+### NDSS22
+- DeepSight: Mitigating Backdoor Attacks in Federated Learning Through Deep Model Inspection.
+  [[pdf]](https://arxiv.org/pdf/2201.00763.pdf)
+  - Phillip Rieger, Thien Duc Nguyen, Markus Miettinen, and Ahmad-Reza Sadeghi. *NDSS*, 2022.
+  - model filtering approach for mitigating backdoor attacks
+
+- ATTEQ-NN: Attention-based QoE-aware Evasive Backdoor Attacks
+
+- Get a Model! Model Hijacking Attack Against Machine Learning Models
+  [[pdf]](https://arxiv.org/pdf/2111.04394.pdf)
+  - Ahmed Salem Michael Backes Yang Zhang
+  -  The adversary aims to hijack a target model to execute a different task than its original one without the model owner noticing.
+
+### S&P21
+- Detecting AI Trojans Using Meta Neural Analysis.
+  [[pdf]](https://arxiv.org/pdf/1910.03137.pdf)
+  - Xiaojun Xu, Qi Wang, Huichen Li, Nikita Borisov, Carl A. Gunter, and Bo Li. *IEEE S&P*, 2021.
+  - prior work impractical assumption: (1) ''all-to-one'' attack is easy to detect, (2) white-box access to the model, (3) clean-data and clean-labell backdoor attack is difficult to detect
+  - black-box access to the model, no need training data, need clean data
+  - experiments cover CV, NLP, speech, tabular
+  - including a brief survey
+
+### Security21
+- FLGUARD: Secure and Private Federated Learning.
+  [[pdf]](https://arxiv.org/pdf/2101.02281.pdf)
+  - Thien Duc Nguyen, Phillip Rieger, Hossein Yalame, Helen Möllering, Hossein Fereidooni, Samuel Marchal, Markus Miettinen, Azalia Mirhoseini, Ahmad-Reza Sadeghi, Thomas Schneider, and Shaza Zeitouni. arXiv, 2021.
+
+- Explanation-Guided Backdoor Poisoning Attacks Against Malware Classifiers
+  [[pdf]](https://www.usenix.org/conference/usenixsecurity21/presentation/severi)
+
+- Graph Backdoor
+  [[pdf]](https://www.usenix.org/conference/usenixsecurity21/presentation/xi)
+
+- Entangled Watermarks as a Defense against Model Extraction
+  [[pdf]](https://www.usenix.org/system/files/sec21-jia.pdf)
+
+### CCS21
+- AI-Lancet: Locating Error-inducing Neurons to Optimize Neural Networks
+  [[pdf]](https://dl.acm.org/doi/abs/10.1145/3460120.3484818)
+
+- Hidden Backdoors in Human-Centric Language Models
+  [[pdf]](https://arxiv.org/pdf/2105.00164.pdf)
+
+- Backdoor Pre-trained Models Can Transfer to All
+  [[pdf]](https://arxiv.org/pdf/2111.00197.pdf)
+
+
+### NDSS21
+
+### SP20
+- Humpty Dumpty: Controlling Word Meanings via Corpus Poisoning
+  [[pdf]](https://arxiv.org/pdf/2001.04935.pdf)
+
+### Security20
+
+### ccs20
+- Composite Backdoor Attack for Deep Neural Network by Mixing Existing Benign Features
+  [[pdf]](https://dl.acm.org/doi/pdf/10.1145/3372297.3423362)
+
 ## Attack and Defense Towards Other Paradigms and Tasks
 ### Collaborative Learning
 
